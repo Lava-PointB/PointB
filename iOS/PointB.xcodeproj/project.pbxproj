@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC1DCDF1BDE12B30076AEF2 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC1DCDE1BDE12B30076AEF2 /* MainTabBar.storyboard */; };
+		0AC1DCE11BDE13970076AEF2 /* MainTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC1DCE01BDE13970076AEF2 /* MainTBC.swift */; };
 		6258C2B34548D1B085C9BE0C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CF9F216D99CCD86C3ED1E0 /* libPods.a */; };
-		958D8D6F1BDE0CD9003164B3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958D8D6E1BDE0CD9003164B3 /* Login.storyboard */; settings = {ASSET_TAGS = (); }; };
+		958D8D6F1BDE0CD9003164B3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958D8D6E1BDE0CD9003164B3 /* Login.storyboard */; };
 		95CCCDD01BDC43D2001B0633 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCCDCF1BDC43D2001B0633 /* AppDelegate.swift */; };
 		95CCCDD91BDC43D2001B0633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CCCDD81BDC43D2001B0633 /* Assets.xcassets */; };
 		95CCCDDC1BDC43D2001B0633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95CCCDDA1BDC43D2001B0633 /* LaunchScreen.storyboard */; };
-		95CCCDED1BDC7D64001B0633 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCCDEC1BDC7D64001B0633 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
-		95CCCDF31BDC8D7B001B0633 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCCDF21BDC8D7B001B0633 /* LoginVC.swift */; settings = {ASSET_TAGS = (); }; };
+		95CCCDED1BDC7D64001B0633 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCCDEC1BDC7D64001B0633 /* Constants.swift */; };
+		95CCCDF31BDC8D7B001B0633 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCCDF21BDC8D7B001B0633 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03CF9F216D99CCD86C3ED1E0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		052518138D1FFA05AF2BCD91 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		0AC1DCDE1BDE12B30076AEF2 /* MainTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
+		0AC1DCE01BDE13970076AEF2 /* MainTBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTBC.swift; sourceTree = "<group>"; };
 		2C123EA8F2DEF7A5D56C7075 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		958D8D6E1BDE0CD9003164B3 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		95CCCDCC1BDC43D2001B0633 /* PointB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AC1DCDD1BDE12B30076AEF2 /* Main Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				0AC1DCDE1BDE12B30076AEF2 /* MainTabBar.storyboard */,
+				0AC1DCE01BDE13970076AEF2 /* MainTBC.swift */,
+			);
+			path = "Main Tab Bar";
+			sourceTree = "<group>";
+		};
 		3D8D0AEF01641946B623C55D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +97,7 @@
 				95CCCDCF1BDC43D2001B0633 /* AppDelegate.swift */,
 				958D8D6D1BDE0A76003164B3 /* UI */,
 				95CCCDF11BDC8D7B001B0633 /* Login */,
+				0AC1DCDD1BDE12B30076AEF2 /* Main Tab Bar */,
 				95CCCDD81BDC43D2001B0633 /* Assets.xcassets */,
 				95CCCDDA1BDC43D2001B0633 /* LaunchScreen.storyboard */,
 				95CCCDDD1BDC43D2001B0633 /* Info.plist */,
@@ -171,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95CCCDDC1BDC43D2001B0633 /* LaunchScreen.storyboard in Resources */,
+				0AC1DCDF1BDE12B30076AEF2 /* MainTabBar.storyboard in Resources */,
 				95CCCDD91BDC43D2001B0633 /* Assets.xcassets in Resources */,
 				958D8D6F1BDE0CD9003164B3 /* Login.storyboard in Resources */,
 			);
@@ -233,6 +248,7 @@
 			files = (
 				95CCCDD01BDC43D2001B0633 /* AppDelegate.swift in Sources */,
 				95CCCDF31BDC8D7B001B0633 /* LoginVC.swift in Sources */,
+				0AC1DCE11BDE13970076AEF2 /* MainTBC.swift in Sources */,
 				95CCCDED1BDC7D64001B0633 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
