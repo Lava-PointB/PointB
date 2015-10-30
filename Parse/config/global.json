@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "latest"
+  },
+  "applications": {
+    "PointB": {
+      "applicationId": "ljXU0UBN7nN39HTEdtNeWevfaBtdKOQl5R8YOwYT",
+      "masterKey": "aWPeXf7QvBvMxtNvWSu5ftoIxxVLqALE9L16CvsU"
+    },
+    "_default": {
+      "link": "PointB"
+    }
+  }
+}

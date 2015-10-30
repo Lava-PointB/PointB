@@ -64,6 +64,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="delegate" destination="SgT-7X-Otf" id="yHH-oJ-wf2"/>
+                                                    <outlet property="height" destination="Bc8-7E-1Ez" id="w4c-0a-b0S"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8DN-8Y-QeO" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
@@ -89,6 +90,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="delegate" destination="SgT-7X-Otf" id="86Q-g2-rAy"/>
+                                                    <outlet property="height" destination="Tzc-L7-UiA" id="2KE-98-h7L"/>
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlV-0B-2pm">

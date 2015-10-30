@@ -17,6 +17,7 @@ class BMAccountField: UITextField
     //MARK: ivars
     private let underline:CALayer = CALayer()
     
+    @IBOutlet private var height: NSLayoutConstraint!
     
     //MARK: IBInspectables
     @IBInspectable var underlineColor:UIColor = UIColor.clearColor()
@@ -55,6 +56,7 @@ class BMAccountField: UITextField
     {
         super.init(coder: aDecoder)
         
+        print("init with coder height:\(height)")
         self.layer.addSublayer(underline)
     }
     
@@ -62,6 +64,11 @@ class BMAccountField: UITextField
     {
         super.init(frame: frame)
         
+        print("init with frame frame:\(self.frame)")
         self.layer.addSublayer(underline)
+    }
+    
+    override func awakeFromNib() {
+        print("awake from nib height:\(height)")
     }
 }
