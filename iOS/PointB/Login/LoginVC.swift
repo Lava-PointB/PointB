@@ -18,29 +18,27 @@ class LoginVC: UIViewController, UITextFieldDelegate
     private let MESSAGE_HEIGHT: CGFloat = 30
     private let MINIMUM_HEIGHT: CGFloat = 300
     private let SCREEN_SIZE = UIScreen.mainScreen().bounds.size
-    
-    private let LOGO_OFFSET_RATIO: CGFloat = 0.10
-    private let WIDGET_OFFSET_RATIO: CGFloat = 0.10
-    
-    private let LOGO_HEIGHT_RATIO: CGFloat = 0.15
-    private let LOGO_TEXT_HEIGHT_RATIO: CGFloat = 0.05
+
 
 
     //MARK: Outlets
-    @IBOutlet var logoOffset: NSLayoutConstraint!
+    @IBOutlet var tabs: UIView!
+    @IBOutlet var loginTab: UIButton!
+    @IBOutlet var signupTab: UIButton!
+    @IBOutlet var underline: UIView!
+        var alignLogin: NSLayoutConstraint!
+        var alignSignup: NSLayoutConstraint!
+    
+    @IBOutlet var widget: UIScrollView!
+        @IBOutlet var loginUsername: BMAccountField!
+        @IBOutlet var loginPassword: BMAccountField!
+        @IBOutlet var passwordReset: UIButton!
     @IBOutlet var widgetOffset: NSLayoutConstraint!
     
-    @IBOutlet var logoHeight: NSLayoutConstraint!
-    @IBOutlet var logoTextHeight: NSLayoutConstraint!
-    
-    
-    @IBOutlet var widget: UIView!
-    @IBOutlet var loginButton: UIButton!
-    @IBOutlet var signupButton: UIButton!
-    
-    @IBOutlet var loginUsernameField: BMAccountField!
-    @IBOutlet var loginPasswordField: BMAccountField!
-    @IBOutlet var forgotPasswordButton: UIButton!
+    @IBOutlet var toolbar: UIToolbar!
+    @IBOutlet var backButton: UIBarButtonItem!
+    @IBOutlet var nextButton: UIBarButtonItem!
+    @IBOutlet var toolbarOffset: NSLayoutConstraint!
     
     
     //MARK: IVARS
@@ -71,11 +69,19 @@ class LoginVC: UIViewController, UITextFieldDelegate
     {
         self.setNeedsStatusBarAppearanceUpdate()
         
-        self.logoOffset.constant = SCREEN_SIZE.height * LOGO_OFFSET_RATIO
-        self.widgetOffset.constant = SCREEN_SIZE.height * WIDGET_OFFSET_RATIO
+        //tabs
+        alignLogin = NSLayoutConstraint.init(item: underline, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: loginTab, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
+        alignSignup = NSLayoutConstraint.init(item: underline, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: signupTab, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
+        tabs.addConstraint(alignLogin)
         
-        self.logoHeight.constant = SCREEN_SIZE.height * LOGO_HEIGHT_RATIO
-        self.logoTextHeight.constant = SCREEN_SIZE.height * LOGO_TEXT_HEIGHT_RATIO
+        //widget
+        widgetOffset.constant = SCREEN_SIZE.height * 0.3
+        
+        //toolbar
+        let clearImage = UIImage.imageWithColor(UIColor.clearColor())
+        toolbar.setShadowImage(clearImage, forToolbarPosition: UIBarPosition.Any)
+        toolbar.setBackgroundImage(clearImage, forToolbarPosition:UIBarPosition.Any, barMetrics:UIBarMetrics.Default)
+        toolbar.alpha = 0.0
     }
     
     
@@ -98,6 +104,54 @@ class LoginVC: UIViewController, UITextFieldDelegate
     }
     
     /**
+    * Called when user presses the login tab button.
+    */
+    @IBAction func loginPressed(sender: AnyObject?)
+    {
+        if (loginSelected) { return }
+        loginSelected = true
+        
+        loginTab.setTitleColor(COLOR_WHITE, forState: UIControlState.Normal)
+        signupTab.setTitleColor(COLOR_FAINT_WHITE, forState: UIControlState.Normal)
+        widget.setContentOffset(CGPointMake(0, 0), animated: true)
+        
+        tabs.removeConstraint(alignSignup)
+        tabs.addConstraint(alignLogin)
+        
+        UIView.animateWithDuration(0.3,
+        animations: {
+            self.view.layoutIfNeeded()
+        },
+        completion: { (success: Bool) in
+            self.loginUsername.becomeFirstResponder()
+        })
+    }
+    
+    /**
+    * Called when user presses the sign up tab button.
+    */
+    @IBAction func signupPressed(sender: AnyObject?)
+    {
+        if (!loginSelected) { return }
+        loginSelected = false
+        
+        loginTab.setTitleColor(COLOR_FAINT_WHITE, forState: UIControlState.Normal)
+        signupTab.setTitleColor(COLOR_WHITE, forState: UIControlState.Normal)
+        widget.setContentOffset(CGPointMake(widget.width, 0), animated:true)
+        
+        tabs.removeConstraint(alignLogin)
+        tabs.addConstraint(alignSignup)
+        
+        UIView.animateWithDuration(0.3,
+        animations: {
+            self.view.layoutIfNeeded()
+        },
+        completion: { (success: Bool) in
+            
+        })
+    }
+    
+    /**
      * Called by notification center when the keyboard is about to show.
      * Only accept the call if keyboard is not already shown.
      * Adjust autolayout so that the same ratios are applied to remaing space (screen height - keyboard).
@@ -113,24 +167,12 @@ class LoginVC: UIViewController, UITextFieldDelegate
         let remaining = SCREEN_SIZE.height - kbFrame.size.height
         
         //animation
-        self.logoHeight.constant = remaining * LOGO_HEIGHT_RATIO
-        self.logoTextHeight.constant = remaining * LOGO_TEXT_HEIGHT_RATIO
+        self.toolbarOffset.constant = kbFrame.height
         
-        self.logoOffset.constant = remaining * LOGO_OFFSET_RATIO
-        self.widgetOffset.constant = remaining * WIDGET_OFFSET_RATIO
-        
-        if (remaining < MINIMUM_HEIGHT)
-        {
-            //if widget is still covered after adjusting
-            //make text disappear
-            self.logoTextHeight.constant = 0
-            
-            self.logoOffset.constant = 20
-            self.widgetOffset.constant = 0
-        }
-        
+        self.widgetOffset.constant = kbFrame.height + toolbar.height + 10
         UIView.animateWithDuration(duration)
         {
+            self.toolbar.alpha = 1
             self.view.layoutIfNeeded()
         }
     }
@@ -144,65 +186,27 @@ class LoginVC: UIViewController, UITextFieldDelegate
     {
         if (!keyboardShown) { return }
         keyboardShown = false
-        print("keyboard hide")
         
         let info = notification.userInfo!
         let duration = info[UIKeyboardAnimationDurationUserInfoKey] as! Double
-
+        let kbFrame = self.view.convertRect(info[UIKeyboardFrameEndUserInfoKey]!.CGRectValue, fromView:nil)
         
         //animation
-        self.logoHeight.constant = SCREEN_SIZE.height * LOGO_HEIGHT_RATIO
-        self.logoTextHeight.constant = SCREEN_SIZE.height * LOGO_TEXT_HEIGHT_RATIO
+        self.toolbarOffset.constant = 0
         
-        self.logoOffset.constant = SCREEN_SIZE.height * LOGO_OFFSET_RATIO
-        self.widgetOffset.constant = SCREEN_SIZE.height * WIDGET_OFFSET_RATIO
+        self.widgetOffset.constant = 200
         UIView.animateWithDuration(duration)
         {
+            self.toolbar.alpha = 0
             self.view.layoutIfNeeded()
         }
     }
     
-    /**
-     * Called when user presses the login tab button.
-     */
-    @IBAction func loginPressed(sender: AnyObject?)
+    
+    //MARK: Account
+    @IBAction func passwordResetPressed(sender: AnyObject?)
     {
-        if (loginSelected) { return }
-        loginSelected = true
         
-        loginButton.setTitleColor(COLOR_WHITE, forState:UIControlState.Normal)
-        signupButton.setTitleColor(COLOR_FAINT_WHITE, forState:UIControlState.Normal)
-        
-        loginUsernameField.becomeFirstResponder()
-    }
-    
-    /**
-     * Called when user presses the sign up tab button.
-     */
-    @IBAction func signupPressed(sender: AnyObject?)
-    {
-        if (!loginSelected) { return }
-        loginSelected = false
-        
-        loginButton.setTitleColor(COLOR_FAINT_WHITE, forState:UIControlState.Normal)
-        signupButton.setTitleColor(COLOR_WHITE, forState:UIControlState.Normal)
-        
-        
-    }
-    
-    
-    
-    //MARK: TextField Delegate
-    func textFieldDidBeginEditing(textField: UITextField)
-    {
-        let field:BMAccountField = textField as! BMAccountField
-        field.underlineColor = COLOR_WHITE
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField)
-    {
-        let field:BMAccountField = textField as! BMAccountField
-        field.underlineColor = COLOR_FAINT_WHITE
     }
 }
 

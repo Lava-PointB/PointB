@@ -9,23 +9,6 @@
 import Foundation
 
 
-//MARK: Extensions
-extension Int
-{
-    var f: CGFloat { return CGFloat(self) }
-}
-
-extension Float
-{
-    var f: CGFloat { return CGFloat(self) }
-}
-
-extension Double
-{
-    var f: CGFloat { return CGFloat(self) }
-}
-
-
 
 //MARK: - App Globals
 let COLOR_WHITE = UIColor.whiteColor()
