@@ -108,7 +108,7 @@ class BMAccountField: UITextField
      */
     override func awakeFromNib()
     {
-        labelHeight = label?.constraintForAttribute(NSLayoutAttribute.Width)
+        labelHeight = label?.constraintForAttribute(NSLayoutAttribute.Height)
     }
     
     
@@ -150,13 +150,13 @@ class BMAccountField: UITextField
     func alert()
     {
         alerted = true
-        underline.backgroundColor = underlineColorSelected.CGColor
+        underline.backgroundColor = underlineColorAlerted.CGColor
     }
     
     /**
      * Identical to alert(), but changes the text and shows associated messageLabel if it exists.
      */
-    func alert(message: String, duration: NSTimeInterval = 0.5)
+    func alert(message: String, duration: NSTimeInterval = DEFAULT_DURATION)
     {
         alert()
         
@@ -177,7 +177,7 @@ class BMAccountField: UITextField
     func dismissAlert()
     {
         alerted = false
-        if (selected)
+        if (isFirstResponder())
         {
             underline.backgroundColor = underlineColorSelected.CGColor
         }

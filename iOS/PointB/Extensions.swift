@@ -28,6 +28,17 @@ extension Double
 //MARK: -
 extension UIView
 {
+    @IBInspectable var cornerRadius: CGFloat
+    {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
+
     var x: CGFloat
     {
         get { return self.frame.origin.x }
@@ -81,6 +92,21 @@ extension UIImage
         return image
     }
 }
+
+
+
+//MARK: - 
+extension String
+{
+    func isUSCEmail() -> Bool
+    {
+        let uscRegex = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(?i)usc.edu"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", uscRegex)
+        
+        return predicate.evaluateWithObject(self)
+    }
+}
+
 
 
 
