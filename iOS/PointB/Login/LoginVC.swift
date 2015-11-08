@@ -459,6 +459,7 @@ class LoginVC: UIViewController, UITextFieldDelegate
             //success
             //TODO: log in success: present main tab view
             print("logged in")
+            self.performSegueWithIdentifier("toMain", sender: self)
         }
     }
     
@@ -522,10 +523,29 @@ class LoginVC: UIViewController, UITextFieldDelegate
     
     func signup()
     {
+        if (signupFirst.text!.isEmpty)
+        {
+            signupFirst.alert()
+            focus(signupFirst, duration: DEFAULT_DURATION)
+            return
+        }
+        
+        if (signupLast.text!.isEmpty)
+        {
+            signupLast.alert()
+            focus(signupLast, duration: DEFAULT_DURATION)
+            return
+        }
+        
+        
+        //all fields valid
         let newUser = PFUser()
         newUser.email = signupEmail.text!
         newUser.username = signupUsername.text!
         newUser.password = signupPassword.text!
+        
+        newUser["firstName"] = signupFirst.text!
+        newUser["lastName"] = signupLast.text!
         
         newUser.signUpInBackgroundWithBlock()
         { (success: Bool, error: NSError?) -> Void in
@@ -537,6 +557,7 @@ class LoginVC: UIViewController, UITextFieldDelegate
             
             //TODO: log in success: present main tab view
             print("signup success")
+            self.performSegueWithIdentifier("toMain", sender: self)
         }
     }
 }

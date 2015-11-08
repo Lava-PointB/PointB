@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SgT-7X-Otf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -30,11 +31,19 @@
                                     <constraint firstAttribute="height" constant="120" id="qpi-T2-E26"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-text-white" translatesAutoresizingMaskIntoConstraints="NO" id="K2t-UF-zIe">
+                                <rect key="frame" x="125" y="198" width="125" height="35"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="bvC-m8-rdy"/>
+                                    <constraint firstAttribute="width" secondItem="K2t-UF-zIe" secondAttribute="height" multiplier="25:7" id="uPt-oD-UIZ"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNq-By-KIf" userLabel="Tabs">
-                                <rect key="frame" x="56" y="299" width="263" height="40"/>
+                                <rect key="frame" x="38" y="299" width="300" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEn-37-vgj">
-                                        <rect key="frame" x="0.0" y="0.0" width="131" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Login">
@@ -45,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDe-f1-Hzm">
-                                        <rect key="frame" x="131" y="0.0" width="132" height="40"/>
+                                        <rect key="frame" x="150" y="0.0" width="150" height="40"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Sign up">
@@ -56,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcG-89-EK6">
-                                        <rect key="frame" x="15" y="39" width="99" height="1"/>
+                                        <rect key="frame" x="15" y="39" width="113" height="1"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -90,7 +99,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username or email" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="DB7-8R-8x2" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
-                                                        <rect key="frame" x="56" y="10" width="263" height="30"/>
+                                                        <rect key="frame" x="38" y="10" width="300" height="30"/>
                                                         <animations/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -121,7 +130,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="E98-p0-bN6" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
-                                                        <rect key="frame" x="56" y="50" width="263" height="30"/>
+                                                        <rect key="frame" x="38" y="50" width="300" height="30"/>
                                                         <animations/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -152,7 +161,7 @@
                                                         </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1B-w5-5Rk">
-                                                        <rect key="frame" x="56" y="80" width="263" height="25"/>
+                                                        <rect key="frame" x="38" y="80" width="300" height="25"/>
                                                         <animations/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="dcK-pY-e13"/>
@@ -188,7 +197,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter USC email" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ASp-AO-xsc" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
-                                                                        <rect key="frame" x="56" y="10" width="263" height="30"/>
+                                                                        <rect key="frame" x="38" y="10" width="300" height="30"/>
                                                                         <animations/>
                                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
@@ -220,7 +229,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0j-Al-RNx">
-                                                                        <rect key="frame" x="56" y="40" width="263" height="0.0"/>
+                                                                        <rect key="frame" x="38" y="40" width="300" height="0.0"/>
                                                                         <animations/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" id="fLs-hS-hJH"/>
@@ -243,10 +252,10 @@
                                                                 <rect key="frame" x="375" y="0.0" width="375" height="120"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72p-86-HTt" userLabel="Name Row">
-                                                                        <rect key="frame" x="56" y="10" width="263" height="30"/>
+                                                                        <rect key="frame" x="38" y="10" width="300" height="30"/>
                                                                         <subviews>
                                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="uSi-sS-eZO" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="126" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="144" height="30"/>
                                                                                 <animations/>
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -275,7 +284,7 @@
                                                                                 </connections>
                                                                             </textField>
                                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="LMQ-NU-Ps1" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
-                                                                                <rect key="frame" x="137" y="0.0" width="126" height="30"/>
+                                                                                <rect key="frame" x="156" y="0.0" width="144" height="30"/>
                                                                                 <animations/>
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -318,7 +327,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ybw-bS-pmA" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
-                                                                        <rect key="frame" x="56" y="50" width="263" height="30"/>
+                                                                        <rect key="frame" x="38" y="50" width="300" height="30"/>
                                                                         <animations/>
                                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
@@ -350,7 +359,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7I-52-1HM">
-                                                                        <rect key="frame" x="56" y="80" width="263" height="0.0"/>
+                                                                        <rect key="frame" x="38" y="80" width="300" height="0.0"/>
                                                                         <animations/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" id="mGh-vp-C1g"/>
@@ -377,7 +386,7 @@
                                                                 <rect key="frame" x="750" y="0.0" width="375" height="120"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="dsu-d7-YVt" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
-                                                                        <rect key="frame" x="56" y="10" width="263" height="30"/>
+                                                                        <rect key="frame" x="38" y="10" width="300" height="30"/>
                                                                         <animations/>
                                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <constraints>
@@ -409,7 +418,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GO0-dl-x27">
-                                                                        <rect key="frame" x="56" y="40" width="263" height="0.0"/>
+                                                                        <rect key="frame" x="38" y="40" width="300" height="0.0"/>
                                                                         <animations/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" id="iN0-1A-q0e"/>
@@ -506,19 +515,11 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-text-white" translatesAutoresizingMaskIntoConstraints="NO" id="K2t-UF-zIe">
-                                <rect key="frame" x="125" y="198" width="125" height="35"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="bvC-m8-rdy"/>
-                                    <constraint firstAttribute="width" secondItem="K2t-UF-zIe" secondAttribute="height" multiplier="25:7" id="uPt-oD-UIZ"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tNq-By-KIf" firstAttribute="width" secondItem="IQ8-zg-pXZ" secondAttribute="width" multiplier="0.7" id="0go-J4-p2o"/>
+                            <constraint firstItem="tNq-By-KIf" firstAttribute="width" secondItem="IQ8-zg-pXZ" secondAttribute="width" multiplier="0.8" id="0go-J4-p2o"/>
                             <constraint firstItem="hXw-jx-K7o" firstAttribute="top" secondItem="1hF-RT-V17" secondAttribute="bottom" constant="50" id="19D-4Q-8rf"/>
                             <constraint firstItem="72p-86-HTt" firstAttribute="width" secondItem="tNq-By-KIf" secondAttribute="width" id="3Ze-j2-bVW"/>
                             <constraint firstItem="hXw-jx-K7o" firstAttribute="centerX" secondItem="IQ8-zg-pXZ" secondAttribute="centerX" id="4d4-im-iZ9"/>
@@ -572,11 +573,20 @@
                         <outlet property="underline" destination="OcG-89-EK6" id="OJt-Uk-M9A"/>
                         <outlet property="widget" destination="Q71-nY-9AY" id="dSQ-rB-Rn6"/>
                         <outlet property="widgetOffset" destination="Urm-i2-i2t" id="zLM-5F-yYR"/>
+                        <segue destination="7qg-nM-SSJ" kind="show" identifier="toMain" id="LRf-iI-IM7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utC-ce-fCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="454.5" y="746.5"/>
+            <point key="canvasLocation" x="537.5" y="765.5"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="NBZ-uF-hUf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="7qg-nM-SSJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eac-vW-x17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946.5" y="766"/>
         </scene>
     </scenes>
     <resources>
