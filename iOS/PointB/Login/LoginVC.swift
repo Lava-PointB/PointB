@@ -117,6 +117,15 @@ class LoginVC: UIViewController, UITextFieldDelegate
         let bottom = (SCREEN_SIZE.height - widget.height) * MAGIC_RATIO
         widgetOffset.constant = bottom
         
+        //name division
+        let rightBorder = CALayer()
+        rightBorder.frame = CGRectMake(signupFirst.width - 1, 0, 1, signupFirst.height)
+        rightBorder.backgroundColor = COLOR_WHITE.CGColor
+        signupFirst.layer.addSublayer(rightBorder)
+        
+        signupLast.leftView = UIView(frame: CGRectMake(0, 0, 10, signupLast.height))
+        signupLast.leftViewMode = UITextFieldViewMode.Always
+        
         
         //toolbar
         let clearImage = UIImage.imageWithColor(UIColor.clearColor())
