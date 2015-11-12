@@ -255,7 +255,7 @@
                                                                         <rect key="frame" x="38" y="10" width="300" height="30"/>
                                                                         <subviews>
                                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="uSi-sS-eZO" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="144" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="30"/>
                                                                                 <animations/>
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -284,7 +284,7 @@
                                                                                 </connections>
                                                                             </textField>
                                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="LMQ-NU-Ps1" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
-                                                                                <rect key="frame" x="156" y="0.0" width="144" height="30"/>
+                                                                                <rect key="frame" x="147" y="0.0" width="153" height="30"/>
                                                                                 <animations/>
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -317,13 +317,13 @@
                                                                         <constraints>
                                                                             <constraint firstItem="uSi-sS-eZO" firstAttribute="top" secondItem="72p-86-HTt" secondAttribute="top" id="2C4-7V-Ppr"/>
                                                                             <constraint firstAttribute="height" constant="30" id="IwO-56-Two"/>
-                                                                            <constraint firstItem="LMQ-NU-Ps1" firstAttribute="width" secondItem="72p-86-HTt" secondAttribute="width" multiplier="0.48" id="Rvp-Le-KBa"/>
+                                                                            <constraint firstItem="LMQ-NU-Ps1" firstAttribute="width" secondItem="72p-86-HTt" secondAttribute="width" multiplier="0.51" id="Rvp-Le-KBa"/>
                                                                             <constraint firstAttribute="bottom" secondItem="uSi-sS-eZO" secondAttribute="bottom" id="Xpv-MV-IQk"/>
                                                                             <constraint firstAttribute="trailing" secondItem="LMQ-NU-Ps1" secondAttribute="trailing" id="aBt-5i-PTO"/>
                                                                             <constraint firstItem="LMQ-NU-Ps1" firstAttribute="top" secondItem="72p-86-HTt" secondAttribute="top" id="cb7-SO-tMX"/>
                                                                             <constraint firstAttribute="bottom" secondItem="LMQ-NU-Ps1" secondAttribute="bottom" id="uQ5-UH-1Yg"/>
                                                                             <constraint firstItem="uSi-sS-eZO" firstAttribute="leading" secondItem="72p-86-HTt" secondAttribute="leading" id="vy1-Nw-BY8"/>
-                                                                            <constraint firstItem="uSi-sS-eZO" firstAttribute="width" secondItem="72p-86-HTt" secondAttribute="width" multiplier="0.48" id="xqt-5r-anc"/>
+                                                                            <constraint firstItem="uSi-sS-eZO" firstAttribute="width" secondItem="72p-86-HTt" secondAttribute="width" multiplier="0.49" id="xqt-5r-anc"/>
                                                                         </constraints>
                                                                     </view>
                                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ybw-bS-pmA" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
@@ -394,7 +394,7 @@
                                                                         </constraints>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="underlineColorNormal">
                                                                                 <color key="value" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
