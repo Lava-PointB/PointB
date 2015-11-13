@@ -18,6 +18,14 @@
 		95CCCDDC1BDC43D2001B0633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95CCCDDA1BDC43D2001B0633 /* LaunchScreen.storyboard */; };
 		95CCCDED1BDC7D64001B0633 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCCDEC1BDC7D64001B0633 /* Constants.swift */; };
 		95CCCDF31BDC8D7B001B0633 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCCDF21BDC8D7B001B0633 /* LoginVC.swift */; };
+		95E8E5E61BF522FA0005ABAD /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5E51BF522FA0005ABAD /* Profile.storyboard */; };
+		95E8E5E81BF523280005ABAD /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8E5E71BF523280005ABAD /* ProfileVC.swift */; };
+		95E8E5ED1BF528EC0005ABAD /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5EB1BF528EC0005ABAD /* CircularStd-Bold.otf */; };
+		95E8E5F51BF528F50005ABAD /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5F01BF528F50005ABAD /* Karla-Bold.ttf */; };
+		95E8E5F61BF528F50005ABAD /* Karla-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5F11BF528F50005ABAD /* Karla-BoldItalic.ttf */; };
+		95E8E5F71BF528F50005ABAD /* Karla-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5F21BF528F50005ABAD /* Karla-Italic.ttf */; };
+		95E8E5F81BF528F50005ABAD /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5F31BF528F50005ABAD /* Karla-Regular.ttf */; };
+		95E8E5F91BF528F50005ABAD /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5F41BF528F50005ABAD /* SIL Open Font License.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +45,14 @@
 		95CCCDE81BDC7C58001B0633 /* PointB-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PointB-Bridging-Header.h"; sourceTree = "<group>"; };
 		95CCCDEC1BDC7D64001B0633 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		95CCCDF21BDC8D7B001B0633 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		95E8E5E51BF522FA0005ABAD /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Profile/Profile.storyboard; sourceTree = "<group>"; };
+		95E8E5E71BF523280005ABAD /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileVC.swift; path = Profile/ProfileVC.swift; sourceTree = "<group>"; };
+		95E8E5EB1BF528EC0005ABAD /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
+		95E8E5F01BF528F50005ABAD /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
+		95E8E5F11BF528F50005ABAD /* Karla-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-BoldItalic.ttf"; sourceTree = "<group>"; };
+		95E8E5F21BF528F50005ABAD /* Karla-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Italic.ttf"; sourceTree = "<group>"; };
+		95E8E5F31BF528F50005ABAD /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
+		95E8E5F41BF528F50005ABAD /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +120,9 @@
 				958D8D6D1BDE0A76003164B3 /* UI */,
 				95CCCDF11BDC8D7B001B0633 /* Login */,
 				9518F8CF1BE5D6C500DB001E /* Main */,
+				95E8E5E41BF522DD0005ABAD /* Group */,
+				95E8E5E31BF522AA0005ABAD /* Profile */,
+				95E8E5E91BF528CB0005ABAD /* Fonts */,
 				95CCCDD81BDC43D2001B0633 /* Assets.xcassets */,
 				95CCCDDA1BDC43D2001B0633 /* LaunchScreen.storyboard */,
 				95CCCDDD1BDC43D2001B0633 /* Info.plist */,
@@ -118,6 +137,53 @@
 				958D8D6E1BDE0CD9003164B3 /* Login.storyboard */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		95E8E5E31BF522AA0005ABAD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				95E8E5E51BF522FA0005ABAD /* Profile.storyboard */,
+				95E8E5E71BF523280005ABAD /* ProfileVC.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		95E8E5E41BF522DD0005ABAD /* Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		95E8E5E91BF528CB0005ABAD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				95E8E5EA1BF528EC0005ABAD /* Circular */,
+				95E8E5EF1BF528F50005ABAD /* Karla */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		95E8E5EA1BF528EC0005ABAD /* Circular */ = {
+			isa = PBXGroup;
+			children = (
+				95E8E5EB1BF528EC0005ABAD /* CircularStd-Bold.otf */,
+			);
+			name = Circular;
+			path = ../../Design/fonts/Circular;
+			sourceTree = "<group>";
+		};
+		95E8E5EF1BF528F50005ABAD /* Karla */ = {
+			isa = PBXGroup;
+			children = (
+				95E8E5F01BF528F50005ABAD /* Karla-Bold.ttf */,
+				95E8E5F11BF528F50005ABAD /* Karla-BoldItalic.ttf */,
+				95E8E5F21BF528F50005ABAD /* Karla-Italic.ttf */,
+				95E8E5F31BF528F50005ABAD /* Karla-Regular.ttf */,
+				95E8E5F41BF528F50005ABAD /* SIL Open Font License.txt */,
+			);
+			name = Karla;
+			path = ../../Design/fonts/Karla;
 			sourceTree = "<group>";
 		};
 		D73737A81283B425D04B6D86 /* Pods */ = {
@@ -190,10 +256,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E8E5F81BF528F50005ABAD /* Karla-Regular.ttf in Resources */,
 				95CCCDDC1BDC43D2001B0633 /* LaunchScreen.storyboard in Resources */,
+				95E8E5ED1BF528EC0005ABAD /* CircularStd-Bold.otf in Resources */,
+				95E8E5F91BF528F50005ABAD /* SIL Open Font License.txt in Resources */,
+				95E8E5F71BF528F50005ABAD /* Karla-Italic.ttf in Resources */,
 				95CCCDD91BDC43D2001B0633 /* Assets.xcassets in Resources */,
+				95E8E5F51BF528F50005ABAD /* Karla-Bold.ttf in Resources */,
+				95E8E5E61BF522FA0005ABAD /* Profile.storyboard in Resources */,
 				958D8D6F1BDE0CD9003164B3 /* Login.storyboard in Resources */,
 				9518F8D21BE5D6C600DB001E /* Main.storyboard in Resources */,
+				95E8E5F61BF528F50005ABAD /* Karla-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +327,7 @@
 			files = (
 				95CCCDD01BDC43D2001B0633 /* AppDelegate.swift in Sources */,
 				9584BD061BE33BF4006A28B8 /* Extensions.swift in Sources */,
+				95E8E5E81BF523280005ABAD /* ProfileVC.swift in Sources */,
 				9518F8D31BE5D6C600DB001E /* MainTBC.swift in Sources */,
 				95CCCDF31BDC8D7B001B0633 /* LoginVC.swift in Sources */,
 				95CCCDED1BDC7D64001B0633 /* Constants.swift in Sources */,
