@@ -19,10 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     {
         Parse.setApplicationId("ljXU0UBN7nN39HTEdtNeWevfaBtdKOQl5R8YOwYT", clientKey: "6CmvCakOsWZ8se9SI9D2qlq55aWUfVDWxGFr5Eeb")
         
-        if (PFUser.currentUser() != nil)
-        {
-            PFUser.logOut()
-        }
+//        if (PFUser.currentUser() != nil) {
+//            PFUser.logOut()
+//        }
         
         let sbName = (PFUser.currentUser() == nil) ? "Login" : "Main"
         let startSB = UIStoryboard.init(name:sbName, bundle:nil)
