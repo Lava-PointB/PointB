@@ -10,6 +10,7 @@
 		6258C2B34548D1B085C9BE0C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CF9F216D99CCD86C3ED1E0 /* libPods.a */; };
 		9518F8D21BE5D6C600DB001E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9518F8D01BE5D6C600DB001E /* Main.storyboard */; };
 		9518F8D31BE5D6C600DB001E /* MainTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518F8D11BE5D6C600DB001E /* MainTBC.swift */; };
+		9551409C1BF9921B009DEAED /* ProfileItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551409B1BF9921B009DEAED /* ProfileItemCell.swift */; };
 		9584BD061BE33BF4006A28B8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9584BD051BE33BF4006A28B8 /* Extensions.swift */; };
 		958D8D6F1BDE0CD9003164B3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958D8D6E1BDE0CD9003164B3 /* Login.storyboard */; };
 		958D8D711BDECD28003164B3 /* BMAccountField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8D701BDECD28003164B3 /* BMAccountField.swift */; };
@@ -26,6 +27,8 @@
 		95E8E5F71BF528F50005ABAD /* Karla-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5F21BF528F50005ABAD /* Karla-Italic.ttf */; };
 		95E8E5F81BF528F50005ABAD /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5F31BF528F50005ABAD /* Karla-Regular.ttf */; };
 		95E8E5F91BF528F50005ABAD /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5F41BF528F50005ABAD /* SIL Open Font License.txt */; };
+		95F074121BF6BB7100FAFB1B /* BMRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F074111BF6BB7100FAFB1B /* BMRoundImageView.swift */; };
+		95FD399A1BFAB354000CA395 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD39991BFAB354000CA395 /* SettingsTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,7 @@
 		2C123EA8F2DEF7A5D56C7075 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9518F8D01BE5D6C600DB001E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9518F8D11BE5D6C600DB001E /* MainTBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTBC.swift; sourceTree = "<group>"; };
+		9551409B1BF9921B009DEAED /* ProfileItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileItemCell.swift; path = Profile/ProfileItemCell.swift; sourceTree = "<group>"; };
 		9584BD051BE33BF4006A28B8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		958D8D6E1BDE0CD9003164B3 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		958D8D701BDECD28003164B3 /* BMAccountField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMAccountField.swift; path = UI/BMAccountField.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		95E8E5F21BF528F50005ABAD /* Karla-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Italic.ttf"; sourceTree = "<group>"; };
 		95E8E5F31BF528F50005ABAD /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		95E8E5F41BF528F50005ABAD /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		95F074111BF6BB7100FAFB1B /* BMRoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMRoundImageView.swift; path = UI/BMRoundImageView.swift; sourceTree = "<group>"; };
+		95FD39991BFAB354000CA395 /* SettingsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTVC.swift; path = Profile/SettingsTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				958D8D701BDECD28003164B3 /* BMAccountField.swift */,
+				95F074111BF6BB7100FAFB1B /* BMRoundImageView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -144,6 +151,8 @@
 			children = (
 				95E8E5E51BF522FA0005ABAD /* Profile.storyboard */,
 				95E8E5E71BF523280005ABAD /* ProfileVC.swift */,
+				9551409B1BF9921B009DEAED /* ProfileItemCell.swift */,
+				95FD39991BFAB354000CA395 /* SettingsTVC.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -329,8 +338,11 @@
 				9584BD061BE33BF4006A28B8 /* Extensions.swift in Sources */,
 				95E8E5E81BF523280005ABAD /* ProfileVC.swift in Sources */,
 				9518F8D31BE5D6C600DB001E /* MainTBC.swift in Sources */,
+				9551409C1BF9921B009DEAED /* ProfileItemCell.swift in Sources */,
 				95CCCDF31BDC8D7B001B0633 /* LoginVC.swift in Sources */,
 				95CCCDED1BDC7D64001B0633 /* Constants.swift in Sources */,
+				95F074121BF6BB7100FAFB1B /* BMRoundImageView.swift in Sources */,
+				95FD399A1BFAB354000CA395 /* SettingsTVC.swift in Sources */,
 				958D8D711BDECD28003164B3 /* BMAccountField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

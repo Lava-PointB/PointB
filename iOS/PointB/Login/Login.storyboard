@@ -573,12 +573,12 @@
                         <outlet property="underline" destination="OcG-89-EK6" id="OJt-Uk-M9A"/>
                         <outlet property="widget" destination="Q71-nY-9AY" id="dSQ-rB-Rn6"/>
                         <outlet property="widgetOffset" destination="Urm-i2-i2t" id="zLM-5F-yYR"/>
-                        <segue destination="7qg-nM-SSJ" kind="show" identifier="toMain" id="LRf-iI-IM7"/>
+                        <segue destination="7qg-nM-SSJ" kind="presentation" identifier="toMain" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="LRf-iI-IM7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utC-ce-fCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="537.5" y="765.5"/>
+            <point key="canvasLocation" x="700.5" y="795.5"/>
         </scene>
         <!--Main-->
         <scene sceneID="NBZ-uF-hUf">
@@ -586,7 +586,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="7qg-nM-SSJ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eac-vW-x17" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946.5" y="766"/>
+            <point key="canvasLocation" x="1109" y="796"/>
         </scene>
     </scenes>
     <resources>

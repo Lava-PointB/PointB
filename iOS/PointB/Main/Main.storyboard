@@ -22,17 +22,17 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeB-J1-Dhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256.5" y="382.5"/>
+            <point key="canvasLocation" x="393.5" y="410.5"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Profile-->
         <scene sceneID="WIz-lL-osX">
             <objects>
-                <viewControllerPlaceholder id="aq2-so-MKr" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Profile" id="aq2-so-MKr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="mlF-Za-pfU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjB-JP-5Bc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696.5" y="598"/>
+            <point key="canvasLocation" x="735" y="730"/>
         </scene>
     </scenes>
 </document>

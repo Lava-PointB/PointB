@@ -22,7 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 //        if (PFUser.currentUser() != nil) {
 //            PFUser.logOut()
 //        }
-        
+
+        //global ui
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:UIFont(name: "Circular Std", size: 20)!]
+
+        //init
         let sbName = (PFUser.currentUser() == nil) ? "Login" : "Main"
         let startSB = UIStoryboard.init(name:sbName, bundle:nil)
         let startVC = startSB.instantiateInitialViewController()

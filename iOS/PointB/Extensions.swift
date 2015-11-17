@@ -26,19 +26,36 @@ extension Double
 
 
 //MARK: -
-extension UIView
+extension String
 {
+    func isUSCEmail() -> Bool
+    {
+        let uscRegex = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(?i)usc.edu"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", uscRegex)
+        
+        return predicate.evaluateWithObject(self)
+    }
+}
+
+
+
+//MARK: -
+@IBDesignable extension UIView
+{
+    //inspectable ui
     @IBInspectable var cornerRadius: CGFloat
     {
         get {
             return layer.cornerRadius
         }
-        set {
-            layer.cornerRadius = newValue
-            layer.masksToBounds = newValue > 0
+        set(newVal) {
+            layer.cornerRadius = newVal
+            layer.masksToBounds = newVal > 0
+            clipsToBounds = newVal > 0
         }
     }
 
+    //frame
     var x: CGFloat
     {
         get { return self.frame.origin.x }
@@ -63,6 +80,8 @@ extension UIView
         set(newHeight) { self.frame.size.height = newHeight }
     }
     
+    
+    //constraints
     func constraintForAttribute(attribute: NSLayoutAttribute) -> NSLayoutConstraint?
     {
         let constraints = self.constraints
@@ -73,6 +92,29 @@ extension UIView
             return nil
         }
         return filtered[0]
+    }
+    
+    //animations
+    ///https://github.com/jonasschnelli/UIView-I7ShakeAnimation/blob/master/UIView%2BI7ShakeAnimation.m
+    func shakeX(var offset: CGFloat, breakFactor: CGFloat, duration: NSTimeInterval, var maxShakes: NSInteger)
+    {
+        let animation = CAKeyframeAnimation(keyPath: "position")
+        animation.duration = duration
+        
+        var keys = [NSValue]()
+        while (offset > 0.01 && maxShakes > 0)
+        {
+            keys.append(NSValue(CGPoint: CGPointMake(self.center.x - offset, self.center.y)))
+            offset *= breakFactor
+            
+            keys.append(NSValue(CGPoint: CGPointMake(self.center.x + offset, self.center.y)))
+            offset *= breakFactor
+            
+            maxShakes--
+        }
+        
+        animation.values = keys
+        self.layer.addAnimation(animation, forKey:"position")
     }
 }
 
@@ -94,19 +136,20 @@ extension UIImage
 }
 
 
-
-//MARK: - 
-extension String
+extension UITableViewCell
 {
-    func isUSCEmail() -> Bool
+    override public var layoutMargins: UIEdgeInsets
     {
-        let uscRegex = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(?i)usc.edu"
-        let predicate = NSPredicate(format: "SELF MATCHES %@", uscRegex)
-        
-        return predicate.evaluateWithObject(self)
+        get
+        {
+            return UIEdgeInsetsZero
+        }
+        set (newValue)
+        {
+            super.layoutMargins = newValue
+        }
     }
 }
-
 
 
 

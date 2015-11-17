@@ -10,6 +10,11 @@ import Foundation
 
 
 
+//MARK: Device Constants
+let SCREEN_SIZE: CGSize = UIScreen.mainScreen().bounds.size
+let WIDTH_LARGE: CGFloat = 350
+
+
 //MARK: - App Globals
 let COLOR_WHITE = UIColor.whiteColor()
 let COLOR_FAINT_WHITE = UIColor.init(white:1.0, alpha:0.6)

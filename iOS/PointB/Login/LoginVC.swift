@@ -17,7 +17,6 @@ class LoginVC: UIViewController, UITextFieldDelegate
     //MARK: Constants
     private let MESSAGE_HEIGHT: CGFloat = 30
     private let MINIMUM_HEIGHT: CGFloat = 300
-    private let SCREEN_SIZE = UIScreen.mainScreen().bounds.size
     
     private let MAGIC_RATIO: CGFloat = 0.25
 
@@ -72,7 +71,7 @@ class LoginVC: UIViewController, UITextFieldDelegate
     //MARK: - Init
     /**
      * Called when view has been loaded.
-     * Initialize any progmatically connections.
+     * Initialize any programmatic connections.
      */
     override func viewDidLoad()
     {
@@ -461,13 +460,12 @@ class LoginVC: UIViewController, UITextFieldDelegate
             if (error != nil)
             {
                 //error handling
-                print("error while logging in")
+                self.widget.shakeX(8.f, breakFactor:0.85.f, duration:0.5, maxShakes:3)
+                print(error)
                 return
             }
             
             //success
-            //TODO: log in success: present main tab view
-            print("logged in")
             self.performSegueWithIdentifier("toMain", sender: self)
         }
     }
@@ -564,8 +562,7 @@ class LoginVC: UIViewController, UITextFieldDelegate
                 return
             }
             
-            //TODO: log in success: present main tab view
-            print("signup success")
+            //success
             self.performSegueWithIdentifier("toMain", sender: self)
         }
     }
