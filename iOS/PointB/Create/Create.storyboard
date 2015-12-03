@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PQz-2T-oD6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--CreateVC-->
+        <scene sceneID="u60-J2-MtH">
+            <objects>
+                <viewController id="PQz-2T-oD6" customClass="CreateVC" customModule="PointB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="loT-xc-Mhs"/>
+                        <viewControllerLayoutGuide type="bottom" id="nA5-sj-wfm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cyF-SM-dD3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJ9-Ut-owR">
+                                <rect key="frame" x="16" y="35" width="343" height="564"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEJ-Lq-8Vo">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                        <animations/>
+                                        <items>
+                                            <barButtonItem image="icon-delete" style="plain" id="oxC-nr-mDg">
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="cancelPressed:" destination="PQz-2T-oD6" id="7C1-JK-C95"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </toolbar>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OJ9-Ut-owR" firstAttribute="top" secondItem="loT-xc-Mhs" secondAttribute="bottom" constant="15" id="3wW-Po-blr"/>
+                            <constraint firstItem="nA5-sj-wfm" firstAttribute="top" secondItem="OJ9-Ut-owR" secondAttribute="bottom" constant="68" id="Lh5-Dl-cr1"/>
+                            <constraint firstItem="OJ9-Ut-owR" firstAttribute="leading" secondItem="cyF-SM-dD3" secondAttribute="leading" constant="16" id="lKh-tq-t11"/>
+                            <constraint firstAttribute="trailing" secondItem="OJ9-Ut-owR" secondAttribute="trailing" constant="16" id="neq-vu-b3V"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dialog" destination="OJ9-Ut-owR" id="Bcv-xe-d7A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4mw-6p-jN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223.5" y="149.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-delete" width="20" height="20"/>
+    </resources>
+</document>

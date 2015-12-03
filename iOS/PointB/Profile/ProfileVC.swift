@@ -67,6 +67,12 @@ class ProfileVC: UIViewController, UITableViewDataSource
     
     
     //Mark: UIControl
+    override func preferredStatusBarStyle() -> UIStatusBarStyle
+    {
+        return UIStatusBarStyle.LightContent
+    }
+    
+    
     /**
      * Adjust the UI based on screen size
      */

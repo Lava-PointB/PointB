@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         //global ui
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:UIFont(name: "Circular Std", size: 20)!]
 
+
         //init
         let sbName = (PFUser.currentUser() == nil) ? "Login" : "Main"
         let startSB = UIStoryboard.init(name:sbName, bundle:nil)
@@ -34,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         self.window!.rootViewController = startVC
         self.window!.makeKeyAndVisible()
+        self.window!.rootViewController!.modalPresentationStyle = .CurrentContext
         
         return true
     }

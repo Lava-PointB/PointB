@@ -27,6 +27,12 @@
 		95E8E5F71BF528F50005ABAD /* Karla-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5F21BF528F50005ABAD /* Karla-Italic.ttf */; };
 		95E8E5F81BF528F50005ABAD /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5F31BF528F50005ABAD /* Karla-Regular.ttf */; };
 		95E8E5F91BF528F50005ABAD /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 95E8E5F41BF528F50005ABAD /* SIL Open Font License.txt */; };
+		95EB3DD51C1035B900DA1D5E /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EB3DD41C1035B900DA1D5E /* Feed.storyboard */; };
+		95EB3DD71C10367400DA1D5E /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EB3DD61C10367400DA1D5E /* Create.storyboard */; };
+		95EB3DD91C10373A00DA1D5E /* Group.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EB3DD81C10373A00DA1D5E /* Group.storyboard */; };
+		95EB3DDB1C10377300DA1D5E /* Planned.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EB3DDA1C10377300DA1D5E /* Planned.storyboard */; };
+		95EB3DDF1C10630800DA1D5E /* BMTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EB3DDE1C10630800DA1D5E /* BMTabBar.swift */; };
+		95EB3DE11C106A4100DA1D5E /* CreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EB3DE01C106A4100DA1D5E /* CreateVC.swift */; };
 		95F074121BF6BB7100FAFB1B /* BMRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F074111BF6BB7100FAFB1B /* BMRoundImageView.swift */; };
 		95FD399A1BFAB354000CA395 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD39991BFAB354000CA395 /* SettingsTVC.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +63,12 @@
 		95E8E5F21BF528F50005ABAD /* Karla-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Italic.ttf"; sourceTree = "<group>"; };
 		95E8E5F31BF528F50005ABAD /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		95E8E5F41BF528F50005ABAD /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		95EB3DD41C1035B900DA1D5E /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		95EB3DD61C10367400DA1D5E /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Create.storyboard; path = PointB/Create/Create.storyboard; sourceTree = SOURCE_ROOT; };
+		95EB3DD81C10373A00DA1D5E /* Group.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Group.storyboard; sourceTree = "<group>"; };
+		95EB3DDA1C10377300DA1D5E /* Planned.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Planned.storyboard; sourceTree = "<group>"; };
+		95EB3DDE1C10630800DA1D5E /* BMTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMTabBar.swift; sourceTree = "<group>"; };
+		95EB3DE01C106A4100DA1D5E /* CreateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateVC.swift; sourceTree = "<group>"; };
 		95F074111BF6BB7100FAFB1B /* BMRoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMRoundImageView.swift; path = UI/BMRoundImageView.swift; sourceTree = "<group>"; };
 		95FD39991BFAB354000CA395 /* SettingsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTVC.swift; path = Profile/SettingsTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +98,7 @@
 			children = (
 				9518F8D01BE5D6C600DB001E /* Main.storyboard */,
 				9518F8D11BE5D6C600DB001E /* MainTBC.swift */,
+				95EB3DDE1C10630800DA1D5E /* BMTabBar.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -127,7 +140,10 @@
 				958D8D6D1BDE0A76003164B3 /* UI */,
 				95CCCDF11BDC8D7B001B0633 /* Login */,
 				9518F8CF1BE5D6C500DB001E /* Main */,
+				95EB3DD31C1035AC00DA1D5E /* Feed */,
 				95E8E5E41BF522DD0005ABAD /* Group */,
+				95EB3DD11C10359600DA1D5E /* Create */,
+				95EB3DD21C10359F00DA1D5E /* Planned */,
 				95E8E5E31BF522AA0005ABAD /* Profile */,
 				95E8E5E91BF528CB0005ABAD /* Fonts */,
 				95CCCDD81BDC43D2001B0633 /* Assets.xcassets */,
@@ -160,6 +176,7 @@
 		95E8E5E41BF522DD0005ABAD /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				95EB3DD81C10373A00DA1D5E /* Group.storyboard */,
 			);
 			path = Group;
 			sourceTree = "<group>";
@@ -193,6 +210,31 @@
 			);
 			name = Karla;
 			path = ../../Design/fonts/Karla;
+			sourceTree = "<group>";
+		};
+		95EB3DD11C10359600DA1D5E /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				95EB3DD61C10367400DA1D5E /* Create.storyboard */,
+				95EB3DE01C106A4100DA1D5E /* CreateVC.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		95EB3DD21C10359F00DA1D5E /* Planned */ = {
+			isa = PBXGroup;
+			children = (
+				95EB3DDA1C10377300DA1D5E /* Planned.storyboard */,
+			);
+			path = Planned;
+			sourceTree = "<group>";
+		};
+		95EB3DD31C1035AC00DA1D5E /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				95EB3DD41C1035B900DA1D5E /* Feed.storyboard */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		D73737A81283B425D04B6D86 /* Pods */ = {
@@ -267,6 +309,8 @@
 			files = (
 				95E8E5F81BF528F50005ABAD /* Karla-Regular.ttf in Resources */,
 				95CCCDDC1BDC43D2001B0633 /* LaunchScreen.storyboard in Resources */,
+				95EB3DD91C10373A00DA1D5E /* Group.storyboard in Resources */,
+				95EB3DD51C1035B900DA1D5E /* Feed.storyboard in Resources */,
 				95E8E5ED1BF528EC0005ABAD /* CircularStd-Bold.otf in Resources */,
 				95E8E5F91BF528F50005ABAD /* SIL Open Font License.txt in Resources */,
 				95E8E5F71BF528F50005ABAD /* Karla-Italic.ttf in Resources */,
@@ -274,6 +318,8 @@
 				95E8E5F51BF528F50005ABAD /* Karla-Bold.ttf in Resources */,
 				95E8E5E61BF522FA0005ABAD /* Profile.storyboard in Resources */,
 				958D8D6F1BDE0CD9003164B3 /* Login.storyboard in Resources */,
+				95EB3DDB1C10377300DA1D5E /* Planned.storyboard in Resources */,
+				95EB3DD71C10367400DA1D5E /* Create.storyboard in Resources */,
 				9518F8D21BE5D6C600DB001E /* Main.storyboard in Resources */,
 				95E8E5F61BF528F50005ABAD /* Karla-BoldItalic.ttf in Resources */,
 			);
@@ -336,6 +382,7 @@
 			files = (
 				95CCCDD01BDC43D2001B0633 /* AppDelegate.swift in Sources */,
 				9584BD061BE33BF4006A28B8 /* Extensions.swift in Sources */,
+				95EB3DDF1C10630800DA1D5E /* BMTabBar.swift in Sources */,
 				95E8E5E81BF523280005ABAD /* ProfileVC.swift in Sources */,
 				9518F8D31BE5D6C600DB001E /* MainTBC.swift in Sources */,
 				9551409C1BF9921B009DEAED /* ProfileItemCell.swift in Sources */,
@@ -343,6 +390,7 @@
 				95CCCDED1BDC7D64001B0633 /* Constants.swift in Sources */,
 				95F074121BF6BB7100FAFB1B /* BMRoundImageView.swift in Sources */,
 				95FD399A1BFAB354000CA395 /* SettingsTVC.swift in Sources */,
+				95EB3DE11C106A4100DA1D5E /* CreateVC.swift in Sources */,
 				958D8D711BDECD28003164B3 /* BMAccountField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
