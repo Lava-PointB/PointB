@@ -22,6 +22,7 @@ class ProfileVC: UIViewController, UITableViewDataSource
 
     private let CELL_ID = "ProfileItemCell"
 
+    private var userItems: [PFObject]? = nil
 
     //MARK: IBOutlets
     //header
@@ -53,6 +54,10 @@ class ProfileVC: UIViewController, UITableViewDataSource
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Profile", style: .Plain, target: nil, action: nil)
         
         //request bucket items from a DataManager with callback to update tableview once done
+        DataManager.sharedInstance.getUserItems()
+            { (items: [PFObject]?) in
+                self.updateTableView(items);
+        }
     }
     
     /**
@@ -110,7 +115,14 @@ class ProfileVC: UIViewController, UITableViewDataSource
      */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 3
+        if (userItems == nil)
+        {
+            return 0
+        }
+        else
+        {
+            return userItems!.count
+        }
     }
     
     /**
@@ -122,10 +134,102 @@ class ProfileVC: UIViewController, UITableViewDataSource
         //get cell
         let cell = tableView.dequeueReusableCellWithIdentifier(CELL_ID) as! ProfileItemCell
         
+        let item = userItems![indexPath.row]
+        
         //configure
-        cell.nameLabel.text = "Skydiving over LA!"
-    
+        cell.nameLabel.text = item["title"] as! String?
+        
+        
+        let createdOn: NSDate = item.createdAt!
+        let today: NSDate = NSDate()
+        
+        let calendar = NSCalendar.currentCalendar()
+        
+        let components = calendar.components([.Year, .Month, .Day, .Hour, .Minute], fromDate: createdOn, toDate: today, options: [])
+        
+        let daysDif:Int = components.day
+        
+        var timeText:String
+        
+        if (components.minute < 1)
+        {
+            timeText = "Just now"
+        }
+        else if (components.hour < 1)
+        {
+            if (components.minute == 1)
+            {
+                timeText = "A minute ago"
+            }
+            else
+            {
+                timeText = "\(components.minute) minutes ago"
+            }
+        }
+        else if (components.day < 1)
+        {
+            if (components.hour == 1)
+            {
+                timeText = "An hour ago"
+            }
+            else
+            {
+                timeText = "\(components.hour) hours ago"
+            }
+        }
+        else if (components.day < 7)
+        {
+            if (components.day == 1)
+            {
+                timeText = "A day ago"
+            }
+            else
+            {
+                timeText = "\(components.day) days ago"
+            }
+        }
+        else if (components.month < 1)
+        {
+            if (components.day/7 == 1)
+            {
+                timeText = "A week ago"
+            }
+            else
+            {
+                timeText = "\(components.day/7) week ago"
+            }
+        }
+        else if (components.year < 1)
+        {
+            if (components.month == 1)
+            {
+                timeText = "A month ago"
+            }
+            else
+            {
+                timeText = "\(components.month) months ago"
+            }
+        }
+        else
+        {
+            if (components.year == 1)
+            {
+                timeText = "A year ago"
+            }
+            else
+            {
+                timeText = "\(components.year) minutes ago"
+            }
+        }
+        
+        
+        cell.timeLabel.text = timeText
         return cell
+    }
+    
+    func updateTableView(items: [PFObject]?) {
+        userItems = items
+        self.tableView.reloadData()
     }
 }
 
