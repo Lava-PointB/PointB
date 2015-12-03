@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AB09B501C10423D00402B0B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB09B4F1C10423D00402B0B /* DataManager.swift */; };
+		0AB09B521C10442900402B0B /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB09B511C10442900402B0B /* DBManager.swift */; };
 		6258C2B34548D1B085C9BE0C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CF9F216D99CCD86C3ED1E0 /* libPods.a */; };
 		9518F8D21BE5D6C600DB001E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9518F8D01BE5D6C600DB001E /* Main.storyboard */; };
 		9518F8D31BE5D6C600DB001E /* MainTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9518F8D11BE5D6C600DB001E /* MainTBC.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		03CF9F216D99CCD86C3ED1E0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		052518138D1FFA05AF2BCD91 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		0AB09B4F1C10423D00402B0B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0AB09B511C10442900402B0B /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		2C123EA8F2DEF7A5D56C7075 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9518F8D01BE5D6C600DB001E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9518F8D11BE5D6C600DB001E /* MainTBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTBC.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 				95CCCDD81BDC43D2001B0633 /* Assets.xcassets */,
 				95CCCDDA1BDC43D2001B0633 /* LaunchScreen.storyboard */,
 				95CCCDDD1BDC43D2001B0633 /* Info.plist */,
+				0AB09B4F1C10423D00402B0B /* DataManager.swift */,
+				0AB09B511C10442900402B0B /* DBManager.swift */,
 			);
 			path = PointB;
 			sourceTree = "<group>";
@@ -388,7 +394,9 @@
 				9551409C1BF9921B009DEAED /* ProfileItemCell.swift in Sources */,
 				95CCCDF31BDC8D7B001B0633 /* LoginVC.swift in Sources */,
 				95CCCDED1BDC7D64001B0633 /* Constants.swift in Sources */,
+				0AB09B521C10442900402B0B /* DBManager.swift in Sources */,
 				95F074121BF6BB7100FAFB1B /* BMRoundImageView.swift in Sources */,
+				0AB09B501C10423D00402B0B /* DataManager.swift in Sources */,
 				95FD399A1BFAB354000CA395 /* SettingsTVC.swift in Sources */,
 				95EB3DE11C106A4100DA1D5E /* CreateVC.swift in Sources */,
 				958D8D711BDECD28003164B3 /* BMAccountField.swift in Sources */,
