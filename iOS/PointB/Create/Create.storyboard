@@ -7,6 +7,7 @@
     <customFonts key="customFonts">
         <mutableArray key="Karla-Bold.ttf">
             <string>Karla-Bold</string>
+            <string>Karla-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -25,15 +26,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJ9-Ut-owR">
                                 <rect key="frame" x="16" y="35" width="343" height="564"/>
                                 <subviews>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEJ-Lq-8Vo">
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEJ-Lq-8Vo">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="iPw-aE-L5H"/>
+                                        </constraints>
                                         <items>
                                             <barButtonItem image="icon-delete" style="plain" id="oxC-nr-mDg">
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <action selector="cancelPressed:" destination="PQz-2T-oD6" id="7C1-JK-C95"/>
                                                 </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="j56-PC-xui"/>
+                                            <barButtonItem image="icon-plus-filled" id="4d5-eq-VH4">
+                                                <color key="tintColor" red="0.098039215690000001" green="0.71764705880000002" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                                             </barButtonItem>
                                         </items>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,12 +63,43 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51O-Az-8E7" customClass="BMAccountField" customModule="PointB" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="52" width="311" height="40"/>
+                                        <animations/>
+                                        <color key="tintColor" red="0.098039215690000001" green="0.71764705880000002" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UOi-TT-mHc"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.098039215690000001" green="0.71764705880000002" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="underlineColorNormal">
+                                                <color key="value" red="0.098039215690000001" green="0.71764705880000002" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="underlineColorSelected">
+                                                <color key="value" red="0.098039215690000001" green="0.71764705880000002" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.098039215690000001" green="0.71764705880000002" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="underlineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="51O-Az-8E7" secondAttribute="trailing" constant="16" id="7bs-Nc-91R"/>
+                                    <constraint firstItem="51O-Az-8E7" firstAttribute="leading" secondItem="OJ9-Ut-owR" secondAttribute="leading" constant="16" id="CiM-4x-w5i"/>
                                     <constraint firstAttribute="trailing" secondItem="yJe-g7-0KR" secondAttribute="trailing" constant="16" id="EHw-0B-qwh"/>
+                                    <constraint firstItem="oEJ-Lq-8Vo" firstAttribute="leading" secondItem="OJ9-Ut-owR" secondAttribute="leading" id="ETp-GX-xJo"/>
                                     <constraint firstItem="yJe-g7-0KR" firstAttribute="leading" secondItem="OJ9-Ut-owR" secondAttribute="leading" constant="16" id="MRT-54-5hH"/>
+                                    <constraint firstItem="oEJ-Lq-8Vo" firstAttribute="top" secondItem="OJ9-Ut-owR" secondAttribute="top" id="fMI-U0-wbM"/>
+                                    <constraint firstAttribute="trailing" secondItem="oEJ-Lq-8Vo" secondAttribute="trailing" id="hoL-MM-fvt"/>
+                                    <constraint firstItem="51O-Az-8E7" firstAttribute="top" secondItem="oEJ-Lq-8Vo" secondAttribute="bottom" constant="8" id="lFa-Ec-bc7"/>
                                     <constraint firstAttribute="bottom" secondItem="yJe-g7-0KR" secondAttribute="bottom" constant="12" id="xn7-Cg-PtS"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -94,5 +133,6 @@
     </scenes>
     <resources>
         <image name="icon-delete" width="20" height="20"/>
+        <image name="icon-plus-filled" width="30" height="30"/>
     </resources>
 </document>
