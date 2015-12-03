@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Karla-Bold.ttf">
+            <string>Karla-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--CreateVC-->
         <scene sceneID="u60-J2-MtH">
@@ -33,9 +38,31 @@
                                         </items>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </toolbar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJe-g7-0KR">
+                                        <rect key="frame" x="16" y="512" width="311" height="40"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.098039215686274508" green="0.71764705882352942" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Koi-Aa-LHu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="18"/>
+                                        <state key="normal" title="Create">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yJe-g7-0KR" secondAttribute="trailing" constant="16" id="EHw-0B-qwh"/>
+                                    <constraint firstItem="yJe-g7-0KR" firstAttribute="leading" secondItem="OJ9-Ut-owR" secondAttribute="leading" constant="16" id="MRT-54-5hH"/>
+                                    <constraint firstAttribute="bottom" secondItem="yJe-g7-0KR" secondAttribute="bottom" constant="12" id="xn7-Cg-PtS"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -55,6 +82,8 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="cancel" destination="oxC-nr-mDg" id="sdK-VX-ESj"/>
+                        <outlet property="create" destination="yJe-g7-0KR" id="ddP-GE-h2w"/>
                         <outlet property="dialog" destination="OJ9-Ut-owR" id="Bcv-xe-d7A"/>
                     </connections>
                 </viewController>

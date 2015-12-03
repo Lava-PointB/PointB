@@ -18,6 +18,7 @@ class CreateVC: UIViewController
     //MARK: Outlets
     @IBOutlet var dialog: UIView!
     @IBOutlet var cancel: UIBarButtonItem!
+    @IBOutlet var create: UIButton!
 
 
     //MARK: - Init
@@ -70,6 +71,14 @@ class CreateVC: UIViewController
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    
+    /**
+     * Called when user presses create button
+     */
+    @IBAction func createPressed(sender: AnyObject?)
+    {
+        
+    }
 }
 
 
