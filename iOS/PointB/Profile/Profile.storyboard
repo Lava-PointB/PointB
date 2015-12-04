@@ -62,9 +62,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                         <animations/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-picture-test" translatesAutoresizingMaskIntoConstraints="NO" id="VP3-Dv-ssY" customClass="BMRoundImageView" customModule="PointB" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-default" translatesAutoresizingMaskIntoConstraints="NO" id="VP3-Dv-ssY" customClass="BMRoundImageView" customModule="PointB" customModuleProvider="target">
                                         <rect key="frame" x="20" y="10" width="90" height="90"/>
                                         <animations/>
+                                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VP3-Dv-ssY" secondAttribute="height" multiplier="1:1" id="izU-da-6z2"/>
                                         </constraints>
@@ -498,6 +499,6 @@
         <image name="icon-groups" width="29" height="30"/>
         <image name="icon-heart" width="29" height="29"/>
         <image name="icon-settings" width="22" height="22"/>
-        <image name="profile-picture-test" width="360" height="480"/>
+        <image name="profile-default" width="256" height="256"/>
     </resources>
 </document>
