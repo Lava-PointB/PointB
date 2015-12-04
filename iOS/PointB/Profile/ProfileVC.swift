@@ -53,6 +53,7 @@ class ProfileVC: UIViewController, UITableViewDataSource
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Profile", style: .Plain, target: nil, action: nil)
         
+        
         //request bucket items from a DataManager with callback to update tableview once done
         DataManager.sharedInstance.getUserItems()
             { (items: [PFObject]?) in
@@ -234,6 +235,8 @@ class ProfileVC: UIViewController, UITableViewDataSource
         
         
         cell.timeLabel.text = timeText
+        cell.likeLabel.text = "\(item["likes"] as! Int)"
+        
         return cell
     }
     
@@ -248,6 +251,18 @@ class ProfileVC: UIViewController, UITableViewDataSource
             self.groupsLabel.text = "\(user["groupCounter"] as! Int)"
             self.ideasLabel.text = "\(user["itemCounter"] as! Int)"
             self.completedLabel.text = "\(user["numFulfilledIdeas"] as! Int)"
+    }
+    
+    func updateAll() {
+        DataManager.sharedInstance.getUserItems()
+            { (items: [PFObject]?) in
+                self.updateTableView(items)
+        }
+        
+        DataManager.sharedInstance.getUser()
+            { (user : PFUser) in
+                self.updateProfile(user)
+        }
     }
 }
 

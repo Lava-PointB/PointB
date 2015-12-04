@@ -102,5 +102,30 @@ class DataManager {
         }
     }
     
+    // createItem
+    //
+    // @param a completion handler to update
+    //
+    func createItem(title: String, completion: (item: PFObject?) -> Void)
+    {
+        PFCloud.callFunctionInBackground("create", withParameters: ["userId": PFUser.currentUser()!.objectId!, "title": title])
+            { (object: AnyObject?, error: NSError?) in
+                if (error != nil)
+                {
+                    print("[Error] PFCloud: createItem")
+                }
+                
+                var item: PFObject
+                
+                if (object != nil)
+                {
+                    item = object as! PFObject
+                    
+                    completion(item: item)
+                }
+                
+        }
+    }
+    
     
 }
