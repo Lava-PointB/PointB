@@ -55,8 +55,8 @@ class ProfileVC: UIViewController, UITableViewDataSource
         
         //request bucket items from a DataManager with callback to update tableview once done
         DataManager.sharedInstance.getUserItems()
-            { (items: [PFObject]?) in
-                self.updateTableView(items)
+        { (items: [PFObject]?) in
+            self.updateTableView(items)
         }
     }
     
@@ -244,7 +244,7 @@ class ProfileVC: UIViewController, UITableViewDataSource
     
     func updateProfile(user: PFUser)
     {
-            self.usernameLabel.text = user["username"] as! String
+            self.usernameLabel.text = user["username"] as? String
             self.groupsLabel.text = "\(user["groupCounter"] as! Int)"
             self.ideasLabel.text = "\(user["itemCounter"] as! Int)"
             self.completedLabel.text = "\(user["numFulfilledIdeas"] as! Int)"
